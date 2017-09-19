@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <base href="{{ path('frontend') }}">
+        <title>{% block title %}Test Task{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+        <script type="text/javascript" src="{{ asset('bundles/app/inline.bundle.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/polyfills.bundle.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/styles.bundle.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/vendor.bundle.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/main.bundle.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

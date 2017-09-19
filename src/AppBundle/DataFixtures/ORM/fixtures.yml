@@ -1,0 +1,18 @@
+AppBundle\Entity\User:
+    admin:
+        username: 'admin'
+        email: 'admin@some-mail.com'
+        firstName: <firstName()>
+        lastName: <lastName()>
+        roles: ['ROLE_SUPER_ADMIN', 'ROLE_ADMIN']
+        plainPassword: 'admin'
+        enabled: 1
+    customer_{1..10}:
+        username(unique): <userName()>
+        email(unique): <safeEmail()>
+        firstName: <firstName()>
+        lastName: <lastName()>
+        roles: ['ROLE_CUSTOMER']
+        plainPassword: 'customer'
+        enabled: <boolean(75)>
+        lastLogin: <dateTime()>

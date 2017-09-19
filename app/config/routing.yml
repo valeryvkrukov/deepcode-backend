@@ -1,0 +1,16 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: rest
+    prefix: /api
+
+api_login_check:
+    path: /api/login_check
+
+users:
+    type: rest
+    prefix: /api
+    resource: AppBundle\Controller\Api\AccountController
+
+frontend:
+    path: /
+    defaults: { _controller: AppBundle:Default:frontend }
